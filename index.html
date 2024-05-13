@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress</title>
+    <link rel="stylesheet" href="./style.scss" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="progressBlock" class="progress-circle"></div>
+
+      <div class="actions">
+        <label for="progressValue" class="actions__item">
+          <input
+            type="number"
+            id="progressValue"
+            min="0"
+            max="100"
+            value="60"
+            oninput="(validity.valid)||(value='');"
+          />
+          Value</label
+        >
+
+        <div class="actions__item">
+          <input type="checkbox" id="animateProgress" />
+          <label for="animateProgress" class="switch"></label>
+          Animate
+        </div>
+
+        <div class="actions__item">
+          <input type="checkbox" id="hideProgress" />
+          <label for="hideProgress" class="switch"></label>
+          Hide
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
